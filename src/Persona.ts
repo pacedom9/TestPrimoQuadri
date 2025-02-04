@@ -9,7 +9,7 @@ export abstract class Persona {
     }
 
     get email(): string {
-        return (`${this.nome.charAt(0).toLowerCase()}${this.cognome.toLowerCase()}@${Dominio}.com`);
+        return (`${this.nome.charAt(0).toLowerCase()}${this.cognome.toLowerCase()}@${this.dominio}.toString().com`);
     }
 
     calcolaEta(): number { 
@@ -23,7 +23,7 @@ export abstract class Persona {
     }
 
     getDati(): string {    
-        return (`id: ${this.id} nome: ${this.nome} cognome: ${this.cognome} età: ${this.calcolaEta()} email: ${this.email} dominio: ${Dominio}`);
+        return (`id: ${this.id}.toString() nome: ${this.nome} cognome: ${this.cognome} età: ${this.calcolaEta()} email: ${this.email}.toString() dominio: ${this.dominio}.toString.toLowercase()`);
     }
 
 }
